@@ -112,7 +112,8 @@ def train_models(df: pd.DataFrame, numerical_cols: list):
 
 
 # ── Load data ────────────────────────────────────────────────────────────────
-DATA_PATH = "heart.csv"
+import os
+DATA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "heart.csv")
 
 try:
     raw_df = pd.read_csv(DATA_PATH)
